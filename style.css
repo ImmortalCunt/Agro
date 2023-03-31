@@ -9,6 +9,30 @@
 html {
   font-size: 16px;
 }
+/* Light mode styles */
+body {
+  background-color: #ffffff;
+  color: #333333;
+}
+
+/* Dark mode styles */
+body.dark-mode {
+  background-color: #333333;
+  color: #ffffff;
+}
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #333333;
+    color: #ffffff;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  body {
+    background-color: #ffffff;
+    color: #333333;
+  }
+}
 
 body {
   font-family: 'Open Sans', sans-serif;

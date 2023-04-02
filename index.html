@@ -5,14 +5,24 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="style.css">
+	<html>
+    <head>
+        <script type="text/javascript">
+            /* UI colors for light & dark modes */
+            var lightMode = {
+            /* Insert your light theme colors */
+            bodyBackground: '#F5F5F5',
+            bodyColor: '#212121',
+            };
+            var darkMode = {
+            /* Insert your dark theme colors */
+            bodyBackground: '#212121',
+            bodyColor: '#fff',
+            };
+        </script>
+        <script src="dark-mode-button/dark-mode-button.js"></script>
+        <link rel="stylesheet" href="dark-mode-button/dark-mode-button.css" />
 	
-	<script>
-		function toggleDarkMode() {
-  var body = document.body;
-  body.classList.toggle("dark-mode");
-}
-
-	</script>
 </head>
 <body>
 	<header>
@@ -26,8 +36,10 @@
 				<li><a href="#">Resources</a></li>
 				<li><a href="#">About Us</a></li>
 				<li><a href="#">Contact Us</a></li>
-				<li><button onclick="toggleDarkMode()">Toggle Dark Mode</button></li>
-
+				<!-- Dark mode button -->
+<div id="dark-mode-button" onclick="darkModeSwitch();">
+    <div id="dark-mode-switch" data-value="light"></div>
+</div>
 			</ul>
 		</nav>
 		<div class="hero-image">
